@@ -22,7 +22,8 @@
 ############################################################
 
 # --job param for *make*
-PARALLEL=$[$(nproc)/4+1]
+# PARALLEL=$[$(nproc)/4+1]
+PARALLEL=1
 
 ###################################################
 # DO NOT change variables bellow unless you known 
@@ -103,10 +104,10 @@ GFLAGS_SOURCE=gflags-2.2.0
 GFLAGS_MD5SUM="b99048d9ab82d8c56e876fb1456c285e"
 
 # glog
-GLOG_DOWNLOAD="https://github.com/google/glog/archive/v0.3.3.tar.gz"
-GLOG_NAME=glog-0.3.3.tar.gz
-GLOG_SOURCE=glog-0.3.3
-GLOG_MD5SUM="c1f86af27bd9c73186730aa957607ed0"
+GLOG_DOWNLOAD="https://github.com/google/glog/archive/v0.4.0.tar.gz"
+GLOG_NAME=glog-0.4.0.tar.gz
+GLOG_SOURCE=glog-0.4.0
+GLOG_MD5SUM="0daea8785e6df922d7887755c3d100d0"
 
 # gtest
 GTEST_DOWNLOAD="https://github.com/google/googletest/archive/release-1.8.0.tar.gz"
@@ -260,10 +261,10 @@ CROARINGBITMAP_NAME=CRoaring-0.2.60.tar.gz
 CROARINGBITMAP_SOURCE=CRoaring-0.2.60
 CROARINGBITMAP_MD5SUM="29602918e6890ffdeed84cb171857046"
 # ORC
-ORC_DOWNLOAD="http://mirror.bit.edu.cn/apache/orc/orc-1.5.8/orc-1.5.8.tar.gz"
-ORC_NAME=orc-1.5.8.tar.gz
-ORC_SOURCE=orc-1.5.8
-ORC_MD5SUM="2318b0a8233c8833b3a6cfd771c60883"
+ORC_DOWNLOAD="http://mirror.bit.edu.cn/apache/orc/orc-1.5.10/orc-1.5.10.tar.gz"
+ORC_NAME=orc-1.5.10.tar.gz
+ORC_SOURCE=orc-1.5.10
+ORC_MD5SUM="704b23b9a96af181d92597239e5f1f82"
 
 # jemalloc
 JEMALLOC_DOWNLOAD="https://github.com/jemalloc/jemalloc/releases/download/5.2.1/jemalloc-5.2.1.tar.bz2"

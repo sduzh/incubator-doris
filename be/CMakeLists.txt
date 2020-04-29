@@ -17,6 +17,10 @@
 
 cmake_minimum_required(VERSION 2.8.10)
 
+set(ENV{DORIS_HOME} ${PROJECT_SOURCE_DIR}/..)
+set(ENV{DORIS_GCC_HOME} /Library/Developer/CommandLineTools/usr)
+set(ENV{JAVA_HOME} /usr/local/opt/openjdk/libexec/openjdk.jdk/Contents/Home)
+
 # set CMAKE_C_COMPILER, this must set before project command
 if (DEFINED ENV{DORIS_GCC_HOME})
     set(CMAKE_C_COMPILER "$ENV{DORIS_GCC_HOME}/bin/gcc")
