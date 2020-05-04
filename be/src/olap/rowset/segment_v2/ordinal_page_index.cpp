@@ -110,6 +110,7 @@ Status OrdinalIndexReader::load(bool use_page_cache, bool kept_in_memory) {
 OrdinalPageIndexIterator OrdinalIndexReader::seek_at_or_before(ordinal_t ordinal) {
     int32_t left = 0;
     int32_t right = _num_pages - 1;
+    // can be replaced with std::lower_bound
     while (left < right) {
         int32_t mid = (left + right + 1) / 2;
 
