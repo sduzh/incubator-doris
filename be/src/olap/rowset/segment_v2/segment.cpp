@@ -161,6 +161,7 @@ Status Segment::_load_index() {
 Status Segment::_create_column_readers() {
     for (uint32_t ordinal = 0; ordinal < _footer.columns().size(); ++ordinal) {
         auto& column_pb = _footer.columns(ordinal);
+        // should be local variable.
         _column_id_to_footer_ordinal.emplace(column_pb.unique_id(), ordinal);
     }
 
