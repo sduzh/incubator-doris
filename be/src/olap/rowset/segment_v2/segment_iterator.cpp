@@ -386,6 +386,7 @@ Status SegmentIterator::_lookup_ordinal(const RowCursor& key, bool is_include,
     }
 
     // binary search to find the exact key
+    // 这里会有随机读吧，是否有意义
     while (start < end) {
         rowid_t mid = (start + end) / 2;
         RETURN_IF_ERROR(_seek_and_peek(mid));
