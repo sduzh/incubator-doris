@@ -214,6 +214,7 @@ Status SegmentIterator::_get_row_ranges_by_column_conditions() {
     RETURN_IF_ERROR(_apply_bitmap_index());
 
     if (!_row_bitmap.isEmpty() && (_opts.conditions != nullptr || _opts.delete_conditions.size() > 0)) {
+        // 这里可以将已经计算出来的_row_bitmap传递进去，降低scan范围吗？
         RowRanges condition_row_ranges = RowRanges::create_single(_segment->num_rows());
         RETURN_IF_ERROR(_get_row_ranges_from_conditions(&condition_row_ranges));
         size_t pre_size = _row_bitmap.cardinality();
