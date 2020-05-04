@@ -98,6 +98,7 @@ Status Segment::_parse_footer() {
         return Status::Corruption(Substitute("Bad segment file $0: file size $1 < 12", _fname, file_size));
     }
 
+    // 一次性按照PAGE_SIZE读取，性能会不会好一些？
     uint8_t fixed_buf[12];
     RETURN_IF_ERROR(rblock->read(file_size - 12, Slice(fixed_buf, 12)));
 
